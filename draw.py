@@ -1,7 +1,5 @@
 import turtle
 import random
-#import os 
-#import sys
 from tkinter import *
 from tkinter import colorchooser
 
@@ -25,9 +23,9 @@ def downThePens():
    b.down()
    c.down()
 def setPosition():
-   a.setpos(random.randint(0,1000),random.randint(0,1000))
-   b.setpos(random.randint(0,1000),random.randint(0,1000))
-   c.setpos(random.randint(0,1000),random.randint(0,1000))
+   a.setpos(random.randint(0,50),random.randint(0,50))
+   b.setpos(random.randint(0,50),random.randint(0,50))
+   c.setpos(random.randint(0,50),random.randint(0,50))
 
 bg=turtle.Screen()
 bg.bgcolor(choose_color("background"))
@@ -45,16 +43,16 @@ while(True):
    setPosition()
    downThePens()
 
-   a.pensize(random.randint(5, 10))
-   a.speed(random.randint(40000, 50000))
+   a.pensize(random.randint(1, 5))
+   a.speed(random.randint(400000, 500000))
    a.color(random.choice(colors))
 
-   b.pensize(random.randint(5, 10))
-   b.speed(random.randint(40000, 50000))
+   b.pensize(random.randint(1, 5))
+   b.speed(random.randint(400000, 500000))
    b.color(random.choice(colors))
 
-   c.pensize(random.randint(5, 10))
-   c.speed(random.randint(4000, 50000))
+   c.pensize(random.randint(1, 5))
+   c.speed(random.randint(400000, 500000))
    c.color(random.choice(colors))
 
    if(random.randint(1, 50) % 2) == 0:
@@ -63,11 +61,11 @@ while(True):
       c.rt(random.randint(45, 270))
    else:
       a.lt(random.randint(45, 270))
-      a.circle(random.randint(20, 5000))
+      a.circle(random.randint(200, 5000))
       b.lt(random.randint(45, 270))
-      b.circle(random.randint(20, 5000))
+      b.circle(random.randint(200, 5000))
       c.lt(random.randint(45, 270))
-      c.circle(random.randint(20, 5000))
+      c.circle(random.randint(200, 5000))
 
    fa = random.randint(25, 1000)
    fb = random.randint(25, 100)
